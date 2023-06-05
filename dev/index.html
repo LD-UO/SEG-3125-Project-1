@@ -21,11 +21,8 @@
                 </a>
             </div>
             <a class="nav-link active col" href="#">Home</a>
-
             <a class="nav-link active col" href="#">Services</a>
-
             <a class="nav-link active col" href="#">Experts</a>
-
             <a class="nav-link active col" href="#">Contacts</a>
         </div>
     </nav>
@@ -168,32 +165,35 @@
 
     <!-- bookings -->
     <div class="container-fluid bg-secondary p-3 border-top border-primary">
-        <h2 class="text-center">Book Now!</h2>
+        <h2 class="text-center m-3">Book Now!</h2>
 
         <!-- STILL NEED TO SET UP FORM ACTION  -->
         <form action="">
-            <div class="row py-3 justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-6 px-auto">
                     <input type="text" name="Full Name" class="rounded" style="width:100%" placeholder=" Full name"
                         required>
                 </div>
                 <div class="col-2 px-auto">
-                    <select name="services" class="rounded" placeholder="Service type" required>
+                    <select name="services" class="rounded" required>
+                        <option value="" disabled selected hidden>Select service type</option>
                         <option value="Cleanings & Exams">Cleanings & Exams</option>
                         <option value="Fillings & Restorations">Fillings & Restorations</option>
                         <option value="Teeth Whitening">Teeth Whitening</option>
+                    </select>
                 </div>
             </div>
             <br>
-            <div class="row py-3 justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-6 px-auto">
-                    <input type="tel" name="Phone" class="rounded" style="width:100%" placeholder=" Phone"
-                        required>
+                    <input type="tel" name="Phone" class="rounded" style="width:100%" placeholder=" Phone" required>
                 </div>
                 <div class="col-2 px-auto">
-                    <select name="expert" class="rounded" placeholder="Select expert" required>
+                    <select name="expert" class="rounded" required>
+                        <option value="" disabled selected hidden>Select an expert</option>
                         <option value="Dr. Michael Watson">Dr. Michael Watson</option>
                         <option value="Dr. Amanda Roberts">Dr. Amanda Roberts</option>
+                    </select>
                 </div>
             </div>
         </form>

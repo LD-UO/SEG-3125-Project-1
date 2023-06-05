@@ -51,7 +51,7 @@
     <!-- hours  -->
     <div class="container" style="max-height: 90%;">
         <div class="bg-secondary rounded mx-4 mx-md-5 border border-primary"
-            style="float: right; margin-top: -80px; position: relative; ">
+            style="float: right; margin-top: -105px; position: relative; ">
             <h1 class="py-1 px-4 text-center">Our Hours</h1>
             <h5 class="">
                 <div class="px-4 pb-3 fw-light" style="justify-content: stretch;">
@@ -79,14 +79,125 @@
             </div>
 
             <!-- book now button  -->
-            <div class="col-sm-12 col-lg-7 text-center d-flex">
+            <div class="col-sm-12 col-lg-7 text-center d-flex ">
                 <button class="btn align-self-center rounded-pill btn-primary"
-                    style="min-width: 80%; min-height:fit-content; font-size: larger;">Book Now</button>
+                    style="min-width: 80%; min-height:fit-content; font-size: larger; justify-self: center;">Book
+                    Now</button>
             </div>
         </div>
     </div>
 
-    
+    <!-- Services -->
+    <div class="container-fluid bg-light pt-5 pb-3">
+        <hr class="mb-5">
+        <div class="row">
+            <div class="col-4">
+                <h2>Our Services</h2>
+                <p>Experience exceptional dental care at affordable prices. Our services:</p>
+                <ol>
+                    <li>
+                        Cleanings & Exams: Thorough oral cleaning and examinations. $100.
+                    </li>
+                    <li>
+                        Fillings & Restorations: Repair and restore damaged teeth. $200 per filling.
+                    </li>
+                    <li>
+                        Teeth Whitening: Brighten your smile professionally. $300.
+                    </li>
+                </ol>
+                <p>Visit us for personalized, healthy, and confident dental care without breaking the bank.</p>
+            </div>
+            <div class="col-md-4 col-sm-7">
+                <div class="rounded overflow-hidden">
+                    <img src="assets/dentistTools.jpeg" style="width: 100%; height: inherit;" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div class="rounded overflow-hidden">
+                    <img width="100%" src="assets/dentistTools2.jpeg" style="width: 100%; height: inherit;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experts -->
+    <div class="container-fluid bg-light p-1">
+        <hr>
+        <h2 class="text-center m-2">Meet our Experts</h2>
+    </div>
+
+    <!-- expert 1 -->
+    <div class="container-fluid bg-secondary border-top border-bottom border-primary">
+        <div class="row">
+            <div class="col my-3 ">
+                <div class="overflow-hidden rounded shadow" style="width: 70%; margin-left: auto; margin-right: auto;">
+                    <img src="assets/dentist1.jpg" style="width: 100%; height: inherit;" alt="">
+                </div>
+            </div>
+            <div class="col d-flex">
+                <p class="p-3" style="align-self: center">Dr. Amanda Roberts is a skilled orthodontist specializing in
+                    creating beautiful smiles. With 15+
+                    years of experience, she offers personalized orthodontic treatments using advanced techniques such
+                    as braces and clear aligners.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- expert 2 -->
+    <div class="container-fluid bg-light border-top border-bottom border-primary">
+        <div class="row">
+            <div class="col d-flex">
+                <p class="p-3" style="align-self: center">Dr. Michael Watson is a renowned implant dentistry specialist.
+                    With expertise in prosthodontics, he provides tailored solutions for missing teeth, using dental
+                    implants to restore smiles and oral functionality.</p>
+            </div>
+            <div class="col my-3 ">
+                <div class="overflow-hidden rounded shadow" style="width: 70%; margin-left: auto; margin-right: auto;">
+                    <img src="assets/dentist2.jpg" style="width: 100%; height: inherit;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacts -->
+    <div class="container-fluid p-3 bg-light">
+        <h2>Contact Us</h2>
+        <h4><a href="#">Diamond.Dentistry@email.com</a></h4>
+        <h3><a href="#">616-616-6545</a></h3>
+    </div>
+
+    <!-- bookings -->
+    <div class="container-fluid bg-secondary p-3 border-top border-primary">
+        <h2 class="text-center">Book Now!</h2>
+
+        <!-- STILL NEED TO SET UP FORM ACTION  -->
+        <form action="">
+            <div class="row py-3 justify-content-center">
+                <div class="col-6 px-auto">
+                    <input type="text" name="Full Name" class="rounded" style="width:100%" placeholder=" Full name"
+                        required>
+                </div>
+                <div class="col-2 px-auto">
+                    <select name="services" class="rounded" placeholder="Service type" required>
+                        <option value="Cleanings & Exams">Cleanings & Exams</option>
+                        <option value="Fillings & Restorations">Fillings & Restorations</option>
+                        <option value="Teeth Whitening">Teeth Whitening</option>
+                </div>
+            </div>
+            <br>
+            <div class="row py-3 justify-content-center">
+                <div class="col-6 px-auto">
+                    <input type="tel" name="Phone" class="rounded" style="width:100%" placeholder=" Phone"
+                        required>
+                </div>
+                <div class="col-2 px-auto">
+                    <select name="expert" class="rounded" placeholder="Select expert" required>
+                        <option value="Dr. Michael Watson">Dr. Michael Watson</option>
+                        <option value="Dr. Amanda Roberts">Dr. Amanda Roberts</option>
+                </div>
+            </div>
+        </form>
+    </div>
 
     <script src="https: //cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
@@ -94,3 +205,5 @@
 </body>
 
 </html>
+
+<!-- TODO: Fix resize for services, Nav bar links -->

@@ -174,8 +174,8 @@
         <form id="appointment-info" action="#">
             <div class="row justify-content-center">
                 <input type="text" id="name" name="Full Name" class="bg-light rounded" placeholder=" Enter full name"
-                    style="display: inline-block; width: fit-content;" required />
-                <select name="services" class="bg-light rounded border border-dark mx-3"
+                    style="display: inline-block; width: fit-content;" />
+                <select id="service" name="services" class="bg-light rounded border border-dark mx-3"
                     style="width: fit-content; display: inline-block;">
                     <option value="" disabled selected hidden>Select service type</option>
                     <option value="Cleanings & Exams">Cleanings & Exams</option>
@@ -185,28 +185,30 @@
             </div>
             <br>
             <div class="row justify-content-center">
-                <input type="tel" name="Phone" class="bg-light rounded" placeholder=" Enter phone"
-                style="width: fit-content; display: inline-block;" />
-                <select name="expert" class=" mx-3 bg-light rounded border border-dark"
-                style="width: fit-content; display: inline-block;">
-                <option value="" disabled selected hidden>Select an expert</option>
-                <option value="Dr. Michael Watson">Dr. Michael Watson</option>
-                <option value="Dr. Amanda Roberts">Dr. Amanda Roberts</option>
-            </select>
-            <select data-bs-toggle="tooltip" data-bs-placement="top" title="Enter number of patients" name="number" class="bg-light rounded border border-dark"
-                style="width: fit-content; display: inline-block;">
-                <option value="1" disabled selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
+                <input id="phone" type="tel" name="Phone" class="bg-light rounded" placeholder=" Enter phone"
+                    style="width: fit-content; display: inline-block;" />
+                <select name="expert" id="expert" class=" mx-3 bg-light rounded border border-dark"
+                    style="width: fit-content; display: inline-block;">
+                    <option value="" disabled selected hidden>Select an expert</option>
+                    <option value="Dr. Michael Watson">Dr. Michael Watson</option>
+                    <option value="Dr. Amanda Roberts">Dr. Amanda Roberts</option>
+                </select>
+                <select id="patient" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter number of patients"
+                    name="number" class="bg-light rounded border border-dark"
+                    style="width: fit-content; display: inline-block;">
+                    <option value="1" disabled selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
             <br>
             <div class="row justify-content-center">
-                <input type="email" name="email" class="mx-3 rounded" style="width:fit-content"
+                <input id="email" type="email" name="email" class="mx-3 rounded" style="width:fit-content"
                     placeholder=" Enter email">
-                <input type="datetime-local" class="bg-light rounded" name="date" style="width:fit-content">
+                <input id="datetime" type="datetime-local" class="bg-light rounded" name="date"
+                    style="width:fit-content">
             </div>
             <br>
             <div class="row justify-content-center">
@@ -220,14 +222,59 @@
     <div class="modal fade" id="myModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" onclick="$('#myModal').modal('hide');" aria-label="Close">
-                        <span>&times;</span>
+                <div class="modal-header bg-primary text-light">
+                    <h5 class="modal-title" id="exampleModalLabel">Your appointment is booked!</h5>
+                    <button type="button" class="close rounded" onclick="$('#myModal').modal('hide');" aria-label="Close">
+                        <span >&times;</span>
                     </button>
                 </div>
-                <div class="modal-content">
+                <div class="modal-body">
+                    <p class="m-1">A booking has been made with the following details:</p>
+                    <table>
+                        <tr>
+                            <th class="text-end">Name: </th>
+                            <td>
+                                <div id="nameModal"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-end">Phone: </th>
+                            <td>
+                                <div id="phoneModal"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-end">Service: </th>
+                            <td>
+                                <div id="serviceModal"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-end">Expert: </th>
+                            <td>
+                                <div id="expertModal"></div>
+                            </td>
+                        </tr>
 
+                        <tr>
+                            <th class="text-end">Email: </th>
+                            <td>
+                                <div id="emailModal"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-end"># of patients: </th>
+                            <td>
+                                <div id="patientsModal"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-end">Date and time: </th>
+                            <td>
+                                <div id="dateTimeModal"></div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal"

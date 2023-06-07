@@ -173,44 +173,45 @@
         <!-- ADD REQUIRED FIELDS -->
         <form id="appointment-info" action="#">
             <div class="row justify-content-center">
-                <div class="col-6 px-auto">
-                    <input type="text" id="name" name="Full Name" class="rounded" style="width:100%"
-                        placeholder=" Enter full name" required>
-                </div>
-                <div class="col-2 px-auto">
-                    <select name="services" class="rounded border border-dark">
-                        <option value="" disabled selected hidden>Select service type</option>
-                        <option value="Cleanings & Exams">Cleanings & Exams</option>
-                        <option value="Fillings & Restorations">Fillings & Restorations</option>
-                        <option value="Teeth Whitening">Teeth Whitening</option>
-                    </select>
-                </div>
+                <input type="text" id="name" name="Full Name" class="bg-light rounded" placeholder=" Enter full name"
+                    style="display: inline-block; width: fit-content;" required />
+                <select name="services" class="bg-light rounded border border-dark mx-3"
+                    style="width: fit-content; display: inline-block;">
+                    <option value="" disabled selected hidden>Select service type</option>
+                    <option value="Cleanings & Exams">Cleanings & Exams</option>
+                    <option value="Fillings & Restorations">Fillings & Restorations</option>
+                    <option value="Teeth Whitening">Teeth Whitening</option>
+                </select>
             </div>
             <br>
             <div class="row justify-content-center">
-                <div class="col-6 px-auto">
-                    <input type="tel" name="Phone" class="rounded" style="width:100%" placeholder=" Enter phone">
-                </div>
-                <div class="col-2 px-auto">
-                    <select name="expert" class="rounded border border-dark">
-                        <option value="" disabled selected hidden>Select an expert</option>
-                        <option value="Dr. Michael Watson">Dr. Michael Watson</option>
-                        <option value="Dr. Amanda Roberts">Dr. Amanda Roberts</option>
-                    </select>
-                </div>
+                <input type="tel" name="Phone" class="bg-light rounded" placeholder=" Enter phone"
+                style="width: fit-content; display: inline-block;" />
+                <select name="expert" class=" mx-3 bg-light rounded border border-dark"
+                style="width: fit-content; display: inline-block;">
+                <option value="" disabled selected hidden>Select an expert</option>
+                <option value="Dr. Michael Watson">Dr. Michael Watson</option>
+                <option value="Dr. Amanda Roberts">Dr. Amanda Roberts</option>
+            </select>
+            <select data-bs-toggle="tooltip" data-bs-placement="top" title="Enter number of patients" name="number" class="bg-light rounded border border-dark"
+                style="width: fit-content; display: inline-block;">
+                <option value="1" disabled selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+            <br>
+            <div class="row justify-content-center">
+                <input type="email" name="email" class="mx-3 rounded" style="width:fit-content"
+                    placeholder=" Enter email">
+                <input type="datetime-local" class="bg-light rounded" name="date" style="width:fit-content">
             </div>
             <br>
             <div class="row justify-content-center">
-                <div class="col-6 px-auto">
-                    <input type="email" name="email" class="rounded" style="width:100%" placeholder=" Enter email">
-                </div>
-                <div class="col-2 px-auto">
-                    <input type="datetime-local" class="rounded" name="date">
-                </div>
-            </div>
-            <br>
-            <div class="row justify-content-center">
-                <button type="submit" class="btn btn-default btn-primary rounded-pill" style="max-width: fit-content;">Submit</button>
+                <button type="submit" class="btn btn-default btn-primary rounded-pill"
+                    style="max-width: fit-content;">Submit</button>
             </div>
         </form>
     </div>
@@ -225,10 +226,12 @@
                         <span>&times;</span>
                     </button>
                 </div>
-                
+                <div class="modal-content">
+
+                </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        onclick="$('#myModal').modal('hide');">Close</button>
                 </div>
             </div>
         </div>

@@ -22,15 +22,15 @@
                         style="max-width: 35%; min-width: 50;" alt="">
                 </a>
             </div>
-            <a class="nav-link active col" href="#">Home</a>
-            <a class="nav-link active col" href="#">Services</a>
-            <a class="nav-link active col" href="#">Experts</a>
-            <a class="nav-link active col" href="#">Contacts</a>
+            <a class="nav-link active col" href="#home">Home</a>
+            <a class="nav-link active col" href="#services">Services</a>
+            <a class="nav-link active col" href="#experts">Experts</a>
+            <a class="nav-link active col" href="#contacts">Contacts</a>
         </div>
     </nav>
 
     <!-- org title  -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="home">
         <div class="row" style="height:150;">
             <div class="col-6 d-flex bg-primary justify-content-center">
                 <h1 class="align-self-center">Diamond</h1>
@@ -79,15 +79,15 @@
 
             <!-- book now button  -->
             <div class="col-sm-12 col-lg-7 text-center d-flex ">
-                <button class="btn align-self-center rounded-pill btn-primary"
-                    style="min-width: 80%; min-height:fit-content; font-size: larger; justify-self: center;">Book
-                    Now</button>
+                    <a href="#contacts" class="btn align-self-center rounded-pill btn-primary"
+                        style="min-width: 80%; min-height:fit-content; font-size: larger; justify-self: center;">Book
+                        Now</a>
             </div>
         </div>
     </div>
 
     <!-- Services -->
-    <div class="container-fluid bg-light pt-5 pb-3">
+    <div class="container-fluid bg-light pt-5 pb-3" id="services">
         <hr class="mb-5">
         <div class="row">
             <div class="col-4">
@@ -120,7 +120,7 @@
     </div>
 
     <!-- Experts -->
-    <div class="container-fluid bg-light p-1">
+    <div class="container-fluid bg-light p-1" id="experts">
         <hr>
         <h2 class="text-center m-2">Meet our Experts</h2>
     </div>
@@ -159,14 +159,14 @@
     </div>
 
     <!-- Contacts -->
-    <div class="container-fluid p-3 bg-light">
+    <div class="container-fluid p-3 bg-light" id="contacts">
         <h2>Contact Us</h2>
         <h4><a href="#">Diamond.Dentistry@email.com</a></h4>
         <h3><a href="#">616-616-6545</a></h3>
     </div>
 
     <!-- bookings -->
-    <div class="container-fluid bg-secondary p-3 border-top border-primary">
+    <div id="booking" class="container-fluid bg-secondary p-3 border-top border-primary">
         <h2 class="text-center m-3">Book Now!</h2>
 
 
@@ -224,8 +224,9 @@
             <div class="modal-content">
                 <div class="modal-header bg-primary text-light">
                     <h5 class="modal-title" id="exampleModalLabel">Your appointment is booked!</h5>
-                    <button type="button" class="close rounded" onclick="$('#myModal').modal('hide');" aria-label="Close">
-                        <span >&times;</span>
+                    <button type="button" class="close rounded" onclick="$('#myModal').modal('hide');"
+                        aria-label="Close">
+                        <span>&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
